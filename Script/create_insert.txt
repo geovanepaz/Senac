@@ -1,0 +1,10 @@
+CREATE TABLE Alunos (
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    Nome NVARCHAR(100) NOT NULL,
+    DataNascimento DATE NOT NULL,
+    Email NVARCHAR(150)
+);
+
+INSERT INTO Alunos(Nome, DataNascimento, Email) VALUES
+('João Silva', '2000-05-15', 'joao.silva@example.com'),
+('Maria Oliveira', '1998-03-22', 'maria.oliveira@example.com');

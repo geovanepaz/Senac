@@ -14,7 +14,7 @@ namespace Senac.BemStar.Infra.Context
         {
             modelBuilder.Entity<Aluno>(entity =>
             {
-                entity.ToTable("AlunosTestes");
+                entity.ToTable("Alunos");
                 entity.HasKey(e => e.Id);
                 entity.Property(e => e.Nome).IsRequired().HasMaxLength(100);
                 entity.Property(e => e.DataNascimento).IsRequired();
