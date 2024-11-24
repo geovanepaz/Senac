@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Senac.BemStar.Application\Senac.BemStar.Application.csproj" />
+		<ProjectReference Include="..\Senac.BemStar.Domain\Senac.BemStar.Domain.csproj" />
+		<ProjectReference Include="..\Senac.BemStar.Infra\Senac.BemStar.Infra.csproj" />
+	</ItemGroup>
+
+</Project>

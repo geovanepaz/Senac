@@ -1,0 +1,107 @@
+﻿@* @model IEnumerable<Senac.BemStar.Domain.DTOS.AlunoDTO>
+
+@{
+    ViewData["Title"] = "Lista de Alunos";
+}
+
+<h1>Lista de Alunos</h1>
+
+<a href="@Url.Action("Criar")" class="btn btn-primary">Adicionar Novo Aluno</a>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Data de Nascimento</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var aluno in Model)
+        {
+            <tr>
+                <td>@aluno.Nome</td>
+                <td>@aluno.Email</td>
+                <td>@aluno.DataNascimento.ToShortDateString()</td>
+                <td>
+                    <a href="@Url.Action("Detalhes", new { id = aluno.Id })" class="btn btn-info">Detalhes</a>
+                    <a href="@Url.Action("Editar", new { id = aluno.Id })" class="btn btn-warning">Editar</a>
+                    <a href="@Url.Action("Excluir", new { id = aluno.Id })" class="btn btn-danger">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+ *@
+
+ @model IEnumerable<Senac.BemStar.Domain.DTOS.AlunoDTO>
+
+@{
+    ViewData["Title"] = "Lista de Alunos";
+}
+
+<!-- Meta Tag para Responsividade -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<!-- Título da Página -->
+<h1 class="text-center mb-4">Lista de Alunos</h1>
+
+<!-- Botão para Adicionar Novo Aluno -->
+<div class="text-end mb-3">
+    <a href="@Url.Action("Criar")" class="btn btn-primary">Adicionar Novo Aluno</a>
+</div>
+
+<!-- Tabela Responsiva -->
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Data de Nascimento</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var aluno in Model)
+            {
+                <tr>
+                    <td>@aluno.Nome</td>
+                    <td>@aluno.Email</td>
+                    <td>@aluno.DataNascimento.ToShortDateString()</td>
+                    <td>
+                        <a href="@Url.Action("Detalhes", new { id = aluno.Id })" class="btn btn-info btn-sm">Detalhes</a>
+                        <a href="@Url.Action("Editar", new { id = aluno.Id })" class="btn btn-warning btn-sm">Editar</a>
+                        <a href="@Url.Action("Excluir", new { id = aluno.Id })" class="btn btn-danger btn-sm">Excluir</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<!-- Estilos Adicionais para Ajustes em Tela Pequena -->
+<style>
+    /* Ajusta os botões dentro da tabela */
+    .table td, .table th {
+        vertical-align: middle;
+    }
+
+    /* Ajusta o botão para não ultrapassar o limite da tela em dispositivos pequenos */
+    .btn {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+
+    /* Responsividade: permite que a tabela seja rolável horizontalmente */
+    .table-responsive {
+        -webkit-overflow-scrolling: touch;
+        overflow-x: auto;
+    }
+
+    /* Ajusta a largura da tabela para que ocupe toda a tela disponível em dispositivos pequenos */
+    .table {
+        width: 100%;
+    }
+</style>

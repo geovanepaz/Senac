@@ -1,0 +1,72 @@
+﻿@{
+    ViewData["Title"] = "Bem-Vindo ao Senac BemStar";
+}
+
+<div class="container py-5">
+    <!-- Título Principal -->
+    <div class="text-center mb-5">
+        <h1 class="display-4 font-weight-bold text-primary">Senac BemStar</h1>
+        <p class="lead text-muted">A aplicação que promove a saúde preventiva para idosos, com foco em qualidade de vida e bem-estar.</p>
+    </div>
+
+    <!-- Descrição do Projeto -->
+    <section class="mb-5">
+        <h2 class="h3 text-dark">Introdução</h2>
+        <p>
+            O envelhecimento populacional é uma realidade global e, com ele, surge a necessidade de promover a saúde preventiva entre os idosos.
+            Este projeto visa a criação de um aplicativo que forneça informações sobre alimentação saudável, atividades físicas, controle de doenças e saúde mental.
+        </p>
+        <p>
+            A missão do aplicativo é ajudar idosos a envelhecer de forma saudável e ativa, oferecendo conteúdo acessível e fácil de entender, com foco na prevenção de doenças.
+        </p>
+    </section>
+
+    <!-- Objetivos do Projeto -->
+    <section class="mb-5">
+        <h2 class="h3 text-dark">Objetivo do Projeto</h2>
+        <p>
+            Fornecer orientações práticas e educativas sobre saúde preventiva, com o objetivo de promover um envelhecimento saudável e ativo para a terceira idade.
+        </p>
+    </section>
+
+    <!-- Imagem Representativa -->
+    <section class="text-center mb-5">
+        <img src="~/imagem-app.jpeg" alt="App de Bem-Estar para Idosos" class="img-fluid" style="max-width: 80%;" />
+    </section>
+
+    <!-- Benefícios do Aplicativo -->
+    <section class="mb-5">
+        <h2 class="h3 text-dark">Benefícios do Aplicativo</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Educação em Saúde</h5>
+                        <p class="card-text">Informações sobre alimentação saudável, exercícios físicos e prevenção de doenças.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Acompanhamento de Saúde</h5>
+                        <p class="card-text">Ferramentas para monitoramento de pressão arterial, níveis de glicose e outros dados de saúde.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Conexão com Profissionais</h5>
+                        <p class="card-text">Indicação de médicos e especialistas focados na saúde do idoso.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Link para Alunos -->
+    <div class="text-center">
+        <a href="@Url.Action("Index", "Aluno")" class="btn btn-lg btn-success">Acessar Alunos</a>
+    </div>
+</div>

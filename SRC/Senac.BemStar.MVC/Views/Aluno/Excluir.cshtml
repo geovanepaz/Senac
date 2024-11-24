@@ -1,0 +1,14 @@
+﻿@model Senac.BemStar.Domain.DTOS.AlunoDTO
+
+@{
+    ViewData["Title"] = "Excluir Aluno";
+}
+
+<h1>Excluir Aluno</h1>
+
+<p>Tem certeza que deseja excluir o aluno @Model.Nome?</p>
+
+<form method="post">
+    <button type="submit" class="btn btn-danger">Excluir</button>
+    <a href="@Url.Action("Index")" class="btn btn-secondary">Cancelar</a>
+</form>
