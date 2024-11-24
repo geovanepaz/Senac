@@ -34,7 +34,7 @@ namespace Senac.BemStar.MVC.Controllers
         // GET: Aluno/Criar
         public IActionResult Criar()
         {
-            return View();
+            return View(new AlunoDTO());
         }
 
         // POST: Aluno/Criar

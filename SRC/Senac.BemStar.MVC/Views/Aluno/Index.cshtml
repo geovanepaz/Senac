@@ -71,9 +71,9 @@
                     <td>@aluno.Email</td>
                     <td>@aluno.DataNascimento.ToShortDateString()</td>
                     <td>
-                        <a href="@Url.Action("Detalhes", new { id = aluno.Id })" class="btn btn-info btn-sm">Detalhes</a>
-                        <a href="@Url.Action("Editar", new { id = aluno.Id })" class="btn btn-warning btn-sm">Editar</a>
-                        <a href="@Url.Action("Excluir", new { id = aluno.Id })" class="btn btn-danger btn-sm">Excluir</a>
+                        <a href="@Url.Action("Detalhes", new { id = aluno.Id })" class="btn btn-info btn-fixo">Detalhes</a>
+                        <a href="@Url.Action("Editar", new { id = aluno.Id })" class="btn btn-warning btn-fixo">Editar</a>
+                        <a href="@Url.Action("Excluir", new { id = aluno.Id })" class="btn btn-danger btn-fixo">Excluir</a>
                     </td>
                 </tr>
             }
@@ -88,10 +88,9 @@
         vertical-align: middle;
     }
 
-    /* Ajusta o botão para não ultrapassar o limite da tela em dispositivos pequenos */
-    .btn {
-        font-size: 12px;
-        padding: 5px 10px;
+    .btn-fixo {
+        width:80px; /* Largura fixa para os botões */
+        text-align: center; /* Centraliza o texto */
     }
 
     /* Responsividade: permite que a tabela seja rolável horizontalmente */
